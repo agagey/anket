@@ -1,0 +1,40 @@
+// mobile
+
+@import vars
+@import mixins
+
+
+@media screen and (max-width: 768px) 
+	.top-menu
+		height: auto
+		min-height: 79px
+		border-bottom: 1px solid #dadada
+		color: $menu_color
+		position: relative
+		&__container
+			display: block
+			width: 100%
+			padding-top: 78px
+		&__mobile
+			display: block
+			position: absolute
+			right: 20px
+			top: 20px
+			cursor: pointer
+		& a
+			display: none
+			padding: 12px 36px
+			border-top: 1px solid #eee
+			&:hover
+				text-decoration: none
+				background-color: $menu_hover_bg
+				border-top: 1px solid $menu_hover_bg
+
+	.personal-info__fields input
+		width: 100%
+
+	.jscript__text
+		font-size: 70%
+
+	.about__text textarea
+		width: 90%

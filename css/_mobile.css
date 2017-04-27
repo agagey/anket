@@ -1,0 +1,36 @@
+@media screen and (max-width: 768px) {
+  .top-menu {
+    height: auto;
+    min-height: 79px;
+    border-bottom: 1px solid #dadada;
+    color: #345996;
+    position: relative; }
+    .top-menu__container {
+      display: block;
+      width: 100%;
+      padding-top: 78px; }
+    .top-menu__mobile {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer; }
+    .top-menu a {
+      display: none;
+      padding: 12px 36px;
+      border-top: 1px solid #eee; }
+      .top-menu a:hover {
+        text-decoration: none;
+        background-color: #e4ebf8;
+        border-top: 1px solid #e4ebf8; }
+
+  .personal-info__fields input {
+    width: 100%; }
+
+  .jscript__text {
+    font-size: 70%; }
+
+  .about__text textarea {
+    width: 90%; } }
+
+/*# sourceMappingURL=_mobile.css.map */

@@ -1,0 +1,206 @@
+// desktop
+
+@import vars
+@import mixins
+
+
+html,
+body
+	height: 100%
+	width: 100%
+
+.main
+	max-width: $wmax
+	margin: 0 auto
+	&__title
+		font-size: 70px
+		font-weight: 100
+		color: $text_color
+		text-align: center
+		margin-top: 105px
+	
+.top-menu
+	height: 82px
+	border-bottom: 1px solid #dadada
+	width: 100%
+	color: $menu_color
+	position: relative
+	&__container
+		width: 578px
+		margin: 0 auto
+		display: flex
+		flex-direction: row
+		justify-content: space-around
+		align-items: center
+		& a
+			padding: 32px 0
+			font-weight: 300
+			&.active
+				color: $menu_color_active
+	&__mobile
+		display: none
+
+.info
+	&__title
+		font-size: 30px
+		font-weight: 300
+		color: $text_color
+		text-align: center
+		margin-bottom: 50px
+		line-height: 37px
+		& img
+			display: block
+			float: none
+			margin: 52px auto 18px
+
+.personal-info
+	&__fields
+		text-align: center
+		&-select, input
+			height: 58px			
+			width: 518px
+			border: 1px solid $input_border_color
+			color: $input_color
+			text-align: center
+			margin-bottom: 28px
+			font-size: 24px
+			font-weight: 500
+			+br(4)
+		&-select
+			position: relative
+			width: 318px
+			color: $input_border_color
+			display: flex
+			flex-direction: row
+			justify-content: space-around
+			align-items: center
+			margin: 0 auto
+			margin-bottom: 25px
+			cursor: pointer
+			& img
+				position: absolute
+				top: 25px
+				right: 20px
+			&:hover
+				& img 
+					opacity: 0.5
+		&-dropdown
+			display: none
+			position: absolute
+			width: 318px
+			height: 200px
+			background-color: #FFF
+			border: 1px solid $input_border_color
+			flex-direction: row
+			justify-content: space-around
+			align-items: center
+			margin: -28px -159px
+			left: 50%
+			cursor: pointer
+			overflow: auto
+			& ul 
+				list-style: none
+				padding: 0
+				& li
+					color: $input_color
+					font-size: 18px
+					font-weight: 500
+					padding: 5px 0
+					width: 100%
+					&:hover
+						color: $ready_btn_bg
+
+.exp
+	& label
+		color: #000
+		font-size: 15px
+		font-weight: 300
+		line-height: 30px
+		cursor: pointer
+		&:before
+			border: 1px solid $checkbox_color
+			content: "\2713"
+			color: #FFF
+			padding: 0 4px
+			font-weight: 500
+			margin-right: 13px
+			+br(3)
+	& input[type=checkbox]
+		display: none
+		&:checked + label:before
+			content: "\2713"
+			color: $checkbox_color
+			font-weight: 500
+	& .info__title
+		margin:
+			top: -7px
+			bottom: 42px
+		& img
+			margin-bottom: 23px
+
+.jscript
+	&__slider
+		height: 100px
+		margin-top: 20px
+		&-0
+			left: 0
+			margin-left: 16px
+		&-25
+			left: 25%
+			margin-left: 14px
+		&-50
+			left: 50%
+			margin-left: 16px
+		&-100
+			right: 0%
+			margin-right: 16px
+	&__text 
+		position: absolute
+		bottom: 95px
+		font-size: 13px
+		color: $js_color
+		font-weight: 300
+	& .info__title
+		margin:
+			top: 72px
+			bottom: 55px
+		& img
+			margin-bottom: 23px
+
+
+.about
+	&__text
+		font-size: 16px
+		color: $text_color
+		line-height: 24px
+		text-align: center
+		font-weight: 300
+		margin:
+			top: -40px
+			bottom: 74px
+		& textarea
+			color: $input_color
+			font-size: 20px
+			font-weight: 500
+			padding: 23px 20px
+			border: 1px solid $input_color
+			margin:
+				top: 38px
+				bottom: 81px
+			+br(3)
+		& a
+			background-color: $ready_btn_bg
+			padding: 15px 31px
+			color: #FFF
+			+br(10)
+			&:hover
+				text-decoration: none
+				background-color: $ready_btn_bg_hover
+	& .info__title
+		margin-top: -17px
+		& img
+			margin-bottom: 24px
+
+
+.show
+	display: block
