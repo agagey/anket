@@ -46,7 +46,8 @@
 					Личная информация
 				</div>
 				<div class="col-lg-12 personal-info__fields">
-					<input type="text" value="Кинёв Дмитрий Павлович" placeholder="ФИО"><br>
+					<input id="fio" class="personal-info_inputs" type="text" value="" placeholder="ФИО" rel="ФИО">
+					<label id="fio-label" class="personal-info_label personal-info_fio-label hidden" for="fio">ФИО</label><br>
 					<div class="personal-info__fields-select">
 						<span>1984</span><img src="images/select_arrow.png" alt="">
 					</div>
@@ -84,9 +85,12 @@
 							<li>1999</li>
 						</ul>
 					</div>
-					<input type="text" value="г. Старый Оскол"  placeholder="Место проживания"><br>
-					<input type="text" value="agagey@mail.ru"  placeholder="Skype"><br>
-					<input type="text" value="agagey@mail.ru"  placeholder="E-mail">
+					<input id="place" class="personal-info_inputs" type="text" value="" placeholder="Место проживания" rel="Место проживания"><br>
+					<label id="place-label" class="personal-info_label personal-info_place-label hidden" for="place">Место проживания</label>
+					<input id="skype" class="personal-info_inputs" type="text" value="" placeholder="Skype" rel="Skype"><br>
+					<label id="skype-label" class="personal-info_label personal-info_skype-label hidden" for="skype">Skype</label>
+					<input id="email" class="personal-info_inputs" type="text" value=""  placeholder="E-mail" rel="E-mail">
+					<label id="email-label" class="personal-info_label personal-info_email-label hidden" for="email">E-mail</label>
 				</div>
 			</div>
 
@@ -130,7 +134,7 @@
 					<div class="jscript__text jscript__slider-25">Использую готовые<br>решения</div>
 					<div class="jscript__text jscript__slider-50">Использую готовые решения<br>и умею переделывать</div>
 					<div class="jscript__text jscript__slider-100">Пишу сложный JS с нуля</div>
-					<input id="SliderSingle" type="slider" name="price" value="52" />
+					<input id="SliderSingle" type="text" name="price" value="52" />
 				</div>
 			</div>
 
@@ -144,7 +148,7 @@
 				
 				<div class="col-lg-12 about__text">
 					Напишите несколько предложений, чем привлекла наша вакансия<br>и что вы ожидаете от работы у нас.<br>
-					<textarea name="about" id="about" cols="48" rows="5">Пожалел, что взял готовый модуль слайдера, часа 1,5 ушло на его "допиливание", хотел съеэкономить время, но лучше бы сам написал...
+					<textarea name="about" id="about_text" cols="48" rows="5">Пожалел, что взял готовый модуль слайдера, часа 1,5 ушло на его "допиливание", хотел съеэкономить время, но лучше бы сам написал...
 
 Ожидаю задач, в которых смогу полностью реализоваться. С нативным JS только не так шустро могу работать, на jQuery могу реализовывать очень сложные вещи, понимаю архитекруру браузерного JS. Нет опыта работы с webpack, пользуюсь grunt'ом, но ввиду ограниченного времени не стал его настраивать. При налачии времени pixel perfect — да.</textarea><br>
 					<a href="">Готово</a>
@@ -156,7 +160,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="js/jquery.slider.min.js"></script>
-	<script src="js/main.min.js"></script>
+	<script src="js/main.js"></script>
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>

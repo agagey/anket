@@ -4,6 +4,7 @@
 @import mixins
 
 
+
 html,
 body
 	height: 100%
@@ -36,7 +37,7 @@ body
 			padding: 32px 0
 			font-weight: 300
 			&.active
-				color: $menu_color_active
+				color: $text_color
 	&__mobile
 		display: none
 
@@ -58,14 +59,16 @@ body
 		text-align: center
 		&-select, input
 			height: 58px			
-			width: 518px
+			max-width: 518px
+			width: 90%
 			border: 1px solid $input_border_color
 			color: $input_color
 			text-align: center
 			margin-bottom: 28px
 			font-size: 24px
 			font-weight: 500
-			+br(4)
+			outline: 0
+			+br(5)
 		&-select
 			position: relative
 			width: 318px
@@ -88,27 +91,59 @@ body
 			display: none
 			position: absolute
 			width: 318px
-			height: 200px
+			height: 300px
 			background-color: #FFF
-			border: 1px solid $input_border_color
+			border: 0px solid $input_border_color
 			flex-direction: row
 			justify-content: space-around
 			align-items: center
-			margin: -28px -159px
+			margin: -24px -159px
 			left: 50%
 			cursor: pointer
 			overflow: auto
+			z-index: 100
+			-webkit-box-shadow: 0 3px 3px 3px #e5e5e5
+			box-shadow: 0 3px 3px 3px #e5e5e5
+			+br(5)
 			& ul 
 				list-style: none
 				padding: 0
+				margin: 0 15px 0 0
+				width: 95%
 				& li
 					color: $input_color
-					font-size: 18px
-					font-weight: 500
-					padding: 5px 0
 					width: 100%
+
+					color: $menu_color_active
+					font-size: 20px
+					font-weight: 300
+					line-height: 36px
 					&:hover
 						color: $ready_btn_bg
+	&_label
+		position: absolute
+		width: 300px
+		margin-left: -150px
+		left: 50%
+		top: 4px
+		height: 13px
+		color: #afafaf
+		font-size: 14px
+		font-weight: 400
+		z-index: 1
+	&_place-label
+		margin-top: 170px
+	&_skype-label
+		margin-top: 255px
+	&_email-label
+		margin-top: 340px
+	&_not-empty
+		color: $text_color !important
+		font-size: 20px !important
+		font-weight: 400
+		padding-top: 12px
+		&:focus
+			border: 1px solid #345996
 
 .exp
 	& label
